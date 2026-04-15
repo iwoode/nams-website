@@ -4,13 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NAMS Content Manager</title>
+    <!-- Load Decap CMS and Netlify Identity from CDN -->
+    <script src="https://unpkg.com/decap-cms-app@^3.0.0/dist/decap-cms-app.js"></script>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="nc-root"></div>
-    <script type="module">
-      import CMS from '/admin/cms.js';
-      CMS.init();
-    </script>
+    <!-- Initialize CMS using global variables -->
+    <script src="/admin/cms.js"></script>
   </body>
 </html>

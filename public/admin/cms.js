@@ -1,5 +1,6 @@
-import CMS from 'decap-cms-app';
-import netlifyIdentity from 'netlify-identity-widget';
+// Decap CMS and Netlify Identity are available globally via CDN
+const { CMS } = window;
+const netlifyIdentity = window.netlifyIdentity;
 
 // Initialize Netlify Identity
 netlifyIdentity.init();
