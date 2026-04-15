@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+  branch: main
+  repo: iwoode/nams-website
+
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+
+collections:
+  - name: "staff"
+    label: "Staff Members"
+    folder: "content/staff"
+    create: true
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Photo", name: "photo", widget: "image", required: false }
+
+
+  - name: "news"
+    label: "News Articles"
+    folder: "content/news"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Excerpt", name: "excerpt", widget: "text" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
