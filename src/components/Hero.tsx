@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
           <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
           <span className="text-white/90 text-sm font-medium tracking-wide">
-            Excellence in Education Since 2000
+            Website still under Development, Stay Updated!
           </span>
         </div>
 
