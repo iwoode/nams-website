@@ -2,13 +2,23 @@
   command = "npm install --legacy-peer-deps && npm run build"
   publish = "dist"
 
+# Redirect /admin to the CMS index.html (only if the request isn't for a file)
+[[redirects]]
+  from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+  force = false
+
+# Handle nested admin routes (e.g., /admin/collections)
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
   status = 200
-  force = true
+  force = false
 
+# SPA fallback for React Router – but only for routes that aren't actual files
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
